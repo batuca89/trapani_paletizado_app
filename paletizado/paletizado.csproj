@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61C5D1DA-192A-4BBE-94B0-24A8D2E989D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>paletizado</RootNamespace>
+    <AssemblyName>paletizado</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\Svr150\packing\Carpeta de empaque %28andres%29\app\app-paletizado\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>15158F8CF432E812A13CC09F8CD53CC213FFD46B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>paletizado_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdvancedDataGridView, Version=1.2.27314.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DG.AdvancedDataGridView.1.2.27314.8\lib\net40\AdvancedDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeStandard, Version=2.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.4.0\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.11.4.0\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.QrCodeNet.Encoding, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\Desktop\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.5.0.1\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.5.0.2\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controller\CargarComboboxCalibre.cs" />
+    <Compile Include="controller\CargarComboboxCalidad.cs" />
+    <Compile Include="controller\CargarComboboxCamara.cs" />
+    <Compile Include="controller\CargarComboboxClientes.cs" />
+    <Compile Include="controller\CargarComboboxColores.cs" />
+    <Compile Include="controller\CargarComboboxCondicionesEnvalado.cs" />
+    <Compile Include="controller\CargarComboboxDeposito.cs" />
+    <Compile Include="controller\CargarComboboxDestino.cs" />
+    <Compile Include="controller\CargarComboboxEnvases.cs" />
+    <Compile Include="controller\CargarComboboxMarcas.cs" />
+    <Compile Include="controller\CargarComboboxPedidos.cs" />
+    <Compile Include="controller\CargarComboboxs.cs" />
+    <Compile Include="controller\CargarComboboxTurno.cs" />
+    <Compile Include="controller\Class1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\AgregarClientes.cs" />
+    <Compile Include="models\BuscarCajaCambioTapaPorCaja.cs" />
+    <Compile Include="models\BuscarCajas.cs" />
+    <Compile Include="models\BuscarCodPallet.cs" />
+    <Compile Include="models\CambioDeTapaPorCadaCaja.cs" />
+    <Compile Include="models\CargarDatosTarjetonMovPallet.cs" />
+    <Compile Include="models\CargarListaString.cs" />
+    <Compile Include="models\CargarPallet.cs" />
+    <Compile Include="models\CargarTarjeton.cs" />
+    <Compile Include="models\CargarVentanaCospel.cs" />
+    <Compile Include="models\CargarVista.cs" />
+    <Compile Include="models\conectadonconsql.cs" />
+    <Compile Include="models\Connection.cs" />
+    <Compile Include="models\CreacionDePallet.cs" />
+    <Compile Include="models\EmbaladorUpCambioDeTapa.cs" />
+    <Compile Include="models\Generales.cs" />
+    <Compile Include="models\GetContramarca.cs" />
+    <Compile Include="models\InitUsuario.cs" />
+    <Compile Include="models\LecturaCajas.cs" />
+    <Compile Include="models\LecturaCajasReducidas.cs" />
+    <Compile Include="models\ListttoDataTableConverter.cs" />
+    <Compile Include="models\PedidosProduccion.cs" />
+    <Compile Include="models\PersonalUp.cs" />
+    <Compile Include="models\SetHeaderDatos.cs" />
+    <Compile Include="models\TarjetonCalibres.cs" />
+    <Compile Include="models\TarjetonEmpaque.cs" />
+    <Compile Include="models\TarjetonMovPallet.cs" />
+    <Compile Include="models\TarjetonPersonal.cs" />
+    <Compile Include="models\TarjetonUp.cs" />
+    <Compile Include="models\TarjetonVentanaCalibre.cs" />
+    <Compile Include="models\TarjetonVentanaUp.cs" />
+    <Compile Include="models\Usuarios.cs" />
+    <Compile Include="models\ValicacionesLectura.cs" />
+    <Compile Include="models\Validaciones.cs" />
+    <Compile Include="models\ValidarLecturaCajas.cs" />
+    <Compile Include="models\VentanaCospel.cs" />
+    <Compile Include="models\VentanaInferior.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="view\Buscar_cospel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Buscar_cospel.Designer.cs">
+      <DependentUpon>Buscar_cospel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CambioDeTapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CambioDeTapa.Designer.cs">
+      <DependentUpon>CambioDeTapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\CambioTapaPorCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\CambioTapaPorCaja.Designer.cs">
+      <DependentUpon>CambioTapaPorCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\EtiquetaProvisoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\EtiquetaProvisoria.Designer.cs">
+      <DependentUpon>EtiquetaProvisoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Impresion_tarjeton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Impresion_tarjeton.Designer.cs">
+      <DependentUpon>Impresion_tarjeton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\inicio_cospel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\inicio_cospel.Designer.cs">
+      <DependentUpon>inicio_cospel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\lectura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\lectura.Designer.cs">
+      <DependentUpon>lectura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Lectura_etiquetas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Lectura_etiquetas.Designer.cs">
+      <DependentUpon>Lectura_etiquetas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\lectura_up_personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\lectura_up_personal.Designer.cs">
+      <DependentUpon>lectura_up_personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\tarjeton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\tarjeton.Designer.cs">
+      <DependentUpon>tarjeton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\VentamaYes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\VentamaYes.Designer.cs">
+      <DependentUpon>VentamaYes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\ventana_cospel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\ventana_cospel.Designer.cs">
+      <DependentUpon>ventana_cospel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\venta_cospel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\venta_cospel.Designer.cs">
+      <DependentUpon>venta_cospel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Buscar_cospel.resx">
+      <DependentUpon>Buscar_cospel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CambioDeTapa.resx">
+      <DependentUpon>CambioDeTapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\CambioTapaPorCaja.resx">
+      <DependentUpon>CambioTapaPorCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\EtiquetaProvisoria.resx">
+      <DependentUpon>EtiquetaProvisoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Impresion_tarjeton.resx">
+      <DependentUpon>Impresion_tarjeton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\inicio_cospel.resx">
+      <DependentUpon>inicio_cospel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\lectura.resx">
+      <DependentUpon>lectura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Lectura_etiquetas.resx">
+      <DependentUpon>Lectura_etiquetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\lectura_up_personal.resx">
+      <DependentUpon>lectura_up_personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\tarjeton.resx">
+      <DependentUpon>tarjeton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\VentamaYes.resx">
+      <DependentUpon>VentamaYes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\ventana_cospel.resx">
+      <DependentUpon>ventana_cospel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\venta_cospel.resx">
+      <DependentUpon>venta_cospel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="paletizado_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\paletizado.models.CambioDeTapaPorCadaCaja.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.CambioTapaPorCaja.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.CreacionDePallet.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.LecturaCajas.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.PedidosProduccion.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.TarjetonCalibres.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.TarjetonEmpaque.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.TarjetonPersonal.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.TarjetonUp.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.TarjetonVentanaCalibre.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.TarjetonVentanaUp.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.VentanaCospel.datasource" />
+    <None Include="Properties\DataSources\paletizado.models.VentanaInferior.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VTSA_LogoIM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
